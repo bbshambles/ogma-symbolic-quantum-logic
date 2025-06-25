@@ -18,7 +18,7 @@ Traditional logic treats 0 and 1 as distinct, complete truths.
 The idea comes from the poetic intuition:  
 > "Between 1 and 0 lies a hush... a shimmer just out of sight."
 
-![Ogma Collapse Diagram](diagrams/A_ogma_symbolic_collapse.png)
+![Ogma Collapse Diagram](IMG_1620.png)
 
 This approach lets logic become fluid — errors become symbolic states, ambiguity becomes useful, and reasoning can persist even with incomplete information.
 
