@@ -1,0 +1,26 @@
+
+class OgmaSymbol:
+    def __init__(self, real, imag=0, label=None, context=None):
+        self.real = real
+        self.imag = imag
+        self.label = label
+        self.context = context or {}
+
+    def __repr__(self):
+        return f"OgmaSymbol(real={self.real}, imag={self.imag}, label={self.label}, context={self.context})"
+
+    def expand_to(self, bits):
+        self.context["bit_width"] = bits
+        self.label = self.label or "expanded"
+        return self
+
+    def reduce_to_symbolic_64bit(self):
+        return OgmaSymbol(2**63 - 1, 1, label="symbolic_fallback", context={"reduced_from": str(self)})
+
+    def presume_intent(self, approximated_value, original_request):
+        return OgmaSymbol(
+            approximated_value,
+            imag=1,
+            label="approximation",
+            context={"requested": original_request}
+        )
