@@ -107,3 +107,5 @@ Prototype logic module under development.
 Initial test cases and logic processors to be made available.
 
 Join us.
+
+📄 [Read the full whitepaper](Ogma_Whitepaper.pdf)
