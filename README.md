@@ -1,4 +1,5 @@
 
+
 # Ogma: Symbolic Quantum Logic
 
 **Ogma** is a symbolic computation paradigm designed to extend classical logic by embracing ambiguity, failure, and imagination.  
