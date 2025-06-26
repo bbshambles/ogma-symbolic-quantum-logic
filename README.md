@@ -22,6 +22,37 @@ The idea comes from the poetic intuition:
 
 This approach lets logic become fluid — errors become symbolic states, ambiguity becomes useful, and reasoning can persist even with incomplete information.
 
+
+# This is a basic illustration of how Ogma logic handles faults.
+
+def run_logic(x):
+    # Normal logic process
+    if x > 0:
+        return x * 2
+    elif x == 0:
+        raise ValueError("Logic undefined at zero")
+    else:
+        raise ValueError("Negative input not handled")
+
+def symbolic_patch(x):
+    # Symbolic fallback layer (Ogma logic)
+    if x == 0:
+        return "O"  # Symbolic origin
+    elif x < 0:
+        return f"i·{abs(x)}"  # Symbolic inversion
+    else:
+        return f"x + i·0.3"  # Symbolic drift near logic
+
+def ogma_process(x):
+    try:
+        return run_logic(x)
+    except Exception as e:
+        print(f"Logic failed: {e}")
+        return symbolic_patch(x)
+
+# Examples
+print(ogma_process(5))    # Normal output: 10
+print(ogma_process(0))    # Symbolic:
 ---
 
 ## 🔹 Version 1.0 (Stable)
