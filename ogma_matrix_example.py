@@ -54,3 +54,19 @@ for i in range(2):
 print("Ogma Symbolic Matrix Equation Result:")
 for i, y in enumerate(Y):
     print(f"y{i+1} =", y)
+
+## 🧮 Symbolic Matrix Multiplication (Non-Collapsing)
+
+The file `ogma_matrix_example.py` demonstrates how Ogma logic can handle matrix equations without collapsing values — maintaining superpositional logic with complex numbers.
+
+```python
+from ogma_matrix_example import OgmaMatrix
+
+matrix_A = OgmaMatrix([[OgmaSymbol(2, 1), OgmaSymbol(1, -1)],
+                       [OgmaSymbol(0, 0), OgmaSymbol(-1, 2)]])
+
+matrix_B = OgmaMatrix([[OgmaSymbol(3, -1), OgmaSymbol(1, 0)],
+                       [OgmaSymbol(4, 1), OgmaSymbol(0, 2)]])
+
+result = matrix_A @ matrix_B
+result.display()
